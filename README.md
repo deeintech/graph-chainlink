@@ -1,6 +1,6 @@
 ## Description
 
-This project demonstrates a demo for [The Graph](https://thegraph.com) queries that retrieve information about CHainlink Price Feeds via [Ethereum Name Service](https://app.ens.domains).
+This project demonstrates a demo for [The Graph](https://thegraph.com) queries that retrieve information about Chainlink Price Feeds via [Ethereum Name Service](https://app.ens.domains).
 
 ## Start a project
 
@@ -13,8 +13,8 @@ npm install
 
 Create `.env` file and add the following keys:
  - `ENS_API` - an API endpoint for [ENS subgraph queries](https://thegraph.com/explorer/subgraph/ensdomains/ens)
- - `RESOLVER_ADDRESS` - a Chainlink resolver address for your market pair (e.g. `BTC/USD`)
- - `PAIR_DOMAIN_ID` - a domain id for a corresponding Chainlink market pair (e.g. `aggregator.btc-usd.data.eth`) within the ENS system
+ - `RESOLVER_ADDRESS` - a Chainlink resolver address for your price feed (e.g. `BTC/USD`)
+ - `FEED_DOMAIN_ID` - a domain id for a corresponding Chainlink price feed (e.g. `aggregator.btc-usd.data.eth`) within the ENS
 
 The `.env.example` file has default values for BTC/USD pair.
 
@@ -51,7 +51,7 @@ Example output:
 }
 ```
 
-This script corresponds to the following subgraph query:
+The above script corresponds to the following subgraph query:
 
 ```
 {
