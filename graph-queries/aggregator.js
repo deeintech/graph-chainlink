@@ -5,14 +5,14 @@ const main = async () => {
   try {
     const ensApi = process.env.ENS_API;
     const resolverAddress = process.env.RESOLVER_ADDRESS;
-    const pairId = process.env.PAIR_ID;
-    const domainId = resolverAddress.concat('-', pairId);
+    const pairDomainId = process.env.PAIR_DOMAIN_ID;
+    const fullDomainId = resolverAddress.concat('-', pairDomainId);
 
     const result = await axios.post(ensApi,
       {
         query: `
       {
-        resolver (id: "${domainId}") {
+        resolver (id: "${fullDomainId}") {
           texts
           address
           domain {
