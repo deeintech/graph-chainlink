@@ -4,7 +4,8 @@
   "description": "Tests for ENS and The Graph",
   "main": "index.js",
   "scripts": {
-    "aggregator": "node graph-queries/aggregator"
+    "aggregator_a": "node graph-queries/aggregator_a",
+    "aggregator_b": "node graph-queries/aggregator_b"
   },
   "keywords": [],
   "author": "",
