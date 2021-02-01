@@ -1,7 +1,7 @@
 const axios = require('axios');
 require('dotenv').config();
 
-const main = async () => {
+(async () => {
   try {
     const ensApi = process.env.ENS_API;
     const resolverAddress = process.env.RESOLVER_ADDRESS;
@@ -11,23 +11,23 @@ const main = async () => {
     const result = await axios.post(ensApi,
       {
         query: `
-      {
-        resolver (id: "${resolverId}") {
-          texts
-          address
-          domain {
-            name
-          }
-           events {
-            id
-            ... on AddrChanged {
-              blockNumber
-              transactionID
+        {
+          resolver (id: "${resolverId}") {
+            texts
+            address
+            domain {
+              name
+            }
+            events {
+              id
+              ... on AddrChanged {
+                blockNumber
+                transactionID
+              }
             }
           }
-        }
-      }      
-      `
+        }      
+        `
       }
     );
     const data = result.data.data.resolver;
@@ -35,6 +35,4 @@ const main = async () => {
   } catch (error) {
     console.log(error);
   }
-}
-
-main();
+})();
