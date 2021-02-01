@@ -1,14 +1,14 @@
 {
-  "name": "ens-link",
+  "name": "ens-graph",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tests for ENS and The Graph",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "aggregator": "node graph-queries/aggregator"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "ethers": "^5.0.26"
