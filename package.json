@@ -1,14 +1,14 @@
 {
   "name": "ens-graph",
   "version": "1.0.0",
-  "description": "Tests for ENS and The Graph",
+  "description": "The Graph Queries for Chainlink",
   "main": "index.js",
   "scripts": {
-    "aggregator_a": "node graph-queries/aggregator_a",
-    "aggregator_b": "node graph-queries/aggregator_b"
+    "ens-aggregator-a": "node queries/ens/aggregator_a",
+    "ens-aggregator-b": "node queries/ens/aggregator_b"
   },
   "keywords": [],
-  "author": "",
+  "author": "dmitrydao",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
